@@ -1,0 +1,66 @@
+@import 'cars';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    @include container;
+}
+
+.banner{
+    @include banner;
+}
+
+.banner img{
+    @include banner_img;
+}
+
+
+.text{
+    @include text;
+}
+
+.thumb{
+    @include thumb;
+}
+
+.thumb img{
+    @include thumb_image;
+}
+
+.active{
+    display: block;
+}
+
+.loader{
+    @include loader;
+}
+
+@media screen and(min-width: 768px){
+    .text{
+        left: 10%;
+    }
+    .thumb img{
+        max-width: 100px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and(min-width: 1024px){
+    .text{
+        left: 10%;
+        top: 10%;
+        max-width: 400px;
+        & span{
+            font-size: 4em;
+        }
+    }
+    .thumb img{
+        max-width: 100px;
+        margin-left: 20px;
+    }
+}
